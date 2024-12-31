@@ -1,16 +1,14 @@
-
 const config = {
-    user :'sa',
-    password : 'Aura@0608',
+    user: 'rajnandini',
+    password: 'raj_nandini',
     server: '127.0.0.1',
-    database : 'my_database',
-    options:{
-        trustedconnection : true,
-        enableAirthAort : true,
-        instancename : 'SQLEXPRESS'
+    database: 'my_database',
+    options: {
+        encrypt: false,
+        trustServerCertificate: true,
+        enableArithAbort: true,
     },
-    port : 54152
-}
-
+    port: 1433
+};
 
 module.exports = config;

@@ -1,3 +1,5 @@
+const sql = require('mssql');
+
 const config = {
     user: 'rajnandini',
     password: 'raj_nandini',
@@ -6,9 +8,13 @@ const config = {
     options: {
         encrypt: false,
         trustServerCertificate: true,
-        enableArithAbort: true,
     },
-    port: 1433
+    port: 54152,
 };
 
-module.exports = config;
+sql.connect(config)
+    .then(() => console.log('Connected to SQL Server'))
+    .catch((err) => console.error('Connection failed:', err));
+
+
+module.exports = config
